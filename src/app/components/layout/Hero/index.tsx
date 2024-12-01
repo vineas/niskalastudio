@@ -1,5 +1,7 @@
+"use client";
 import Navbar from "../Navbar";
 import styles from "./background.module.css";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
@@ -10,21 +12,35 @@ export default function Hero() {
           className="flex flex-col justify-center items-center"
           style={{ height: "calc(100vh - 60px)" }}
         >
-          <div>
-            <h1 className="text-center text-white text-3xl md:text-5xl font-bold">
+          <motion.div
+            animate={{ opacity: [0, 1], y: [-50, 0] }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <motion.h1
+              className="text-center text-white text-3xl md:text-5xl font-bold"
+              animate={{ scale: [0.8, 1] }}
+              transition={{ duration: 1 }}
+            >
               Abadikan Momenmu
-            </h1>
-          </div>
-          <div className="text-center mt-3 px-20 mb-5">
-            <p className="text-white text-sm md:text-2xl">
-              Abadikan momen berharga bersama Niskala Studio, rasakan pengalaman
-              istimewa, dan ciptakan kenangan tak terlupakan buat setiap detik
-              jadi berarti
-            </p>
-          </div>
-          <div className="text-center mt-5 px-20">
-            {/* <FreeConsultButton /> */}
-          </div>
+            </motion.h1>
+          </motion.div>
+          <motion.div
+            className="text-center mt-3 px-20 mb-5"
+            animate={{ opacity: [0, 1], y: [-50, 0] }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <motion.p
+              className="text-white text-md md:text-2xl"
+              animate={{ scale: [0.8, 1] }}
+              transition={{ duration: 1 }}
+            >
+              Rasakan pengalaman istimewa dan ciptakan kenangan tak terlupakan
+              buat setiap detik jadi berarti
+            </motion.p>
+          </motion.div>
+          {/* <div className="text-center mt-5 px-20">
+            <FreeConsultButton />
+          </div> */}
         </div>
       </div>
     </>
