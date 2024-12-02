@@ -1,3 +1,4 @@
+"use client";
 import {
   Disclosure,
   DisclosureButton,
@@ -7,6 +8,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import logoNiskala from "../../../../assets/icon/niskala-logo.png";
+import { motion } from "motion/react";
+
 
 const navigation = [
   { name: "About", href: "#about", current: true },
@@ -21,7 +24,12 @@ const navigation = [
 export default function Navbar() {
   return (
     <Disclosure>
-      <div className="fixed w-full top-0 left-0">
+      <motion.div 
+      className="fixed w-full top-0 left-0"
+      initial={{  opacity: 0 }}
+      whileInView={{  opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      >
         <div className="top-0 bg-black">
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
@@ -87,7 +95,7 @@ export default function Navbar() {
             </div>
           </DisclosurePanel>
         </div>
-      </div>
+      </motion.div>
     </Disclosure>
   );
 }
