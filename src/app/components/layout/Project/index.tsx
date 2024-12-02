@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Project from "../../data/data.json";
 // import { motion } from "motion/react";
 import Link from "next/link";
@@ -21,12 +23,12 @@ export default function Projects() {
         {Project.slice()
           .reverse()
           .map((item, index) => (
-            <div
+            <motion.div
               className="shadow-2xl rounded-xl"
               key={index}
-              //   whileHover={{ scale: 1.1 }}
-              //   whileTap={{ scale: 0.9 }}
-              //   transition={{ type: "spring", stiffness: 300, damping: 17 }}
+              whileHover={{ scale: 1.1 }} 
+              whileTap={{ scale: 0.9 }} 
+              transition={{ type: "spring", stiffness: 300, damping: 17 }}
             >
               <Link href={item.link}>
                 <img
@@ -38,7 +40,7 @@ export default function Projects() {
                   <h4 className="text-center font-bold">{item.title}</h4>
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
       </div>
     </div>

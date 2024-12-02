@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "motion/react";
 import {
   Disclosure,
   DisclosureButton,
@@ -8,7 +9,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import logoNiskala from "../../../../assets/icon/niskala-logo.png";
-import { motion } from "motion/react";
 
 
 const navigation = [
@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <Disclosure>
       <motion.div 
-      className="fixed w-full top-0 left-0"
+      className="fixed w-full top-0 left-0  z-50"
       initial={{  opacity: 0 }}
       whileInView={{  opacity: 1 }}
       transition={{ duration: 1.5 }}
