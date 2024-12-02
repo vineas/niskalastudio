@@ -6,9 +6,12 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div
+    <motion.div
       id="project"
       className="py-20 bg-white w-11/12 md:container mx-auto px-14"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
     >
       <div className="mb-12">
         <h3 className="text-3xl md:text-5xl font-bold text-center mb-3">
@@ -43,6 +46,6 @@ export default function Projects() {
             </motion.div>
           ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
