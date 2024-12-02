@@ -17,5 +17,5 @@
     background-position: center;
     filter: brightness(37%);
     z-index: -1;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }

@@ -6,7 +6,12 @@ import { motion } from "motion/react";
 export default function Hero() {
   return (
     <>
-      <div className={styles.background}>
+      <motion.div
+        className={styles.background}
+        initial={{  opacity: 0 }}
+        whileInView={{  opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <Navbar />
         <div
           className="flex flex-col justify-center items-center"
@@ -15,19 +20,27 @@ export default function Hero() {
           <motion.div
             animate={{ opacity: [0, 1], y: [-50, 0] }}
             transition={{ duration: 0.8, delay: 0.5 }}
+            initial={{ x: -50, opacity: 0}}
+            whileInView={{ x: 0, opacity: 1}}
+            // transition={{ duration: 3 }}
           >
             <motion.h1
               className="text-center text-white text-3xl md:text-5xl font-bold"
               animate={{ scale: [0.8, 1] }}
               transition={{ duration: 1 }}
+              initial={{ x: -50, opacity: 0}}
+              whileInView={{ x: 0, opacity: 1}}
+              // transition={{ duration: 3 }}
             >
               Abadikan Momenmu
             </motion.h1>
           </motion.div>
           <motion.div
             className="text-center mt-3 px-20 mb-5"
-            animate={{ opacity: [0, 1], y: [-50, 0] }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            animate={{ scale: [0.8, 1] }}
+            transition={{ duration: 1 }}
+            initial={{ x: -50, opacity: 0}}
+            whileInView={{ x: 0, opacity: 1}}
           >
             <motion.p
               className="text-white text-md md:text-2xl"
@@ -42,7 +55,7 @@ export default function Hero() {
             <FreeConsultButton />
           </div> */}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
