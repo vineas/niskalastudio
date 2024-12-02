@@ -6,8 +6,11 @@ import { motion } from "motion/react";
 export default function Hero() {
   return (
     <>
-      <div
+      <motion.div
         className={styles.background}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
       >
         <Navbar />
         <div
@@ -53,7 +56,7 @@ export default function Hero() {
             <FreeConsultButton />
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -1,8 +1,15 @@
+"use client";
+import { motion } from "motion/react";
 import ServiceData from "../../data/service.json";
 
 export default function Service() {
   return (
-    <div id="services" className="bg-gray-200 py-20">
+    <motion.div 
+    id="services" 
+    className="bg-gray-200 py-20"
+    initial={{  opacity: 0 }}
+    whileInView={{  opacity: 1 }}
+    transition={{ duration: 1.5 }}>
       <div className="w-11/12 md:container mx-auto px-14">
         <h3 className="text-3xl md:text-5xl font-bold text-center mb-2">
           Our Services
@@ -26,6 +33,6 @@ export default function Service() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
