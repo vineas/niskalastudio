@@ -8,8 +8,8 @@ export default function Hero() {
     <>
       <motion.div
         className={styles.background}
-        initial={{  opacity: 0 }}
-        whileInView={{  opacity: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
         <Navbar />
@@ -20,16 +20,16 @@ export default function Hero() {
           <motion.div
             animate={{ opacity: [0, 1], y: [-50, 0] }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            initial={{ x: -50, opacity: 0}}
-            whileInView={{ x: 0, opacity: 1}}
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             // transition={{ duration: 3 }}
           >
             <motion.h1
               className="text-center text-white text-3xl md:text-5xl font-bold"
               animate={{ scale: [0.8, 1] }}
               transition={{ duration: 1 }}
-              initial={{ x: -50, opacity: 0}}
-              whileInView={{ x: 0, opacity: 1}}
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
               // transition={{ duration: 3 }}
             >
               Abadikan Momenmu
@@ -39,13 +39,15 @@ export default function Hero() {
             className="text-center mt-3 px-20 mb-5"
             animate={{ scale: [0.8, 1] }}
             transition={{ duration: 1 }}
-            initial={{ x: -50, opacity: 0}}
-            whileInView={{ x: 0, opacity: 1}}
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
           >
             <motion.p
               className="text-white text-md md:text-2xl"
-              animate={{ scale: [0.8, 1] }}
-              transition={{ duration: 1 }}
+            animate={{ scale: [0.8, 1] }}
+            transition={{ duration: 1 }}
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             >
               Rasakan pengalaman istimewa dan ciptakan kenangan tak terlupakan
               buat setiap detik jadi berarti
